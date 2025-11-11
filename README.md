@@ -24,3 +24,9 @@ This game is designed for children and adolescents who have Attention Deficit/Hy
 ‣ **_Playability_** of the game </br>
 ‣ **_Improvement_** of the player based on their results </br>
 ‣ **_Accuracy_** of the player in completing the game </br>
+
+## UML
+<img width="800" height="1021" alt="my own work" src="https://github.com/user-attachments/assets/f3fcf6a8-a374-4b54-9a43-0fc3b0965c6d" /> </br>
+
+## Basic Class Diagram
+<img width="611" height="802" alt="Basic Class Diagram drawio" src="https://github.com/user-attachments/assets/46450874-3bf8-4141-b16a-ca2488f64c50" /> </br>

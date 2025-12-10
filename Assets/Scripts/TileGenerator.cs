@@ -6,7 +6,7 @@ public class TileGenerator : MonoBehaviour
     public GameObject cloudPrefab;
     private Rigidbody2D rb;
 
-    int[] listNum = { -2, -1, 0, 1, 2 };
+    int[] listNum = { -2, 2 };
     int[] pos = { -1, 1};
     int num;
     Vector2 startPos;
@@ -19,13 +19,13 @@ public class TileGenerator : MonoBehaviour
     private void Start()
     {
         rb = GetComponentInChildren<Rigidbody2D>();
-
-        do
-        {
-            num = Random.Range(0, listNum.Length);
-        }
-        while (listNum[num] == 0);
-        startPos = new Vector2(listNum[num], 0);
+        num = Random.Range(0, listNum.Length);
+        //do
+        //{
+        //    num = Random.Range(0, listNum.Length);
+        //}
+        //while (listNum[num] == 0);
+        startPos = new Vector2(listNum[num], 2);
         Instantiate(dirtPrefab, startPos, Quaternion.identity);
     }
 
@@ -49,14 +49,14 @@ public class TileGenerator : MonoBehaviour
 
         if (randomNum == 0)
         {
-            pos.x = (pos.x > -2) ? pos.x - 2 : pos.x + 2;
+            pos.x = (pos.x > -6) ? pos.x - 2 : pos.x + 2;
         }
         else
         {
-            pos.x = (pos.x < 2) ? pos.x + 2 : pos.x - 2;
+            pos.x = (pos.x < 6) ? pos.x + 2 : pos.x - 2;
         }
 
-        pos.y += 1.5f;
+        pos.y += 3;
 
         Instantiate(dirtPrefab, pos, Quaternion.identity);
         startPos = pos; // update for next spawn

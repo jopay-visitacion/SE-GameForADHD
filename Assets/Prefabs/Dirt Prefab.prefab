@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729642697531199992}
   - component: {fileID: 7246559886963222803}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: grass block (120x60)_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495854990877906212}
   - component: {fileID: 5127593971259505307}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TriggerLeave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,8 +177,7 @@ GameObject:
   - component: {fileID: 1973813553390960404}
   - component: {fileID: 3511335365997974506}
   - component: {fileID: 3554927573387860128}
-  - component: {fileID: 3220863338076008441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dirt Prefab
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -195,7 +194,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1729642697531199992}
@@ -330,15 +329,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &3220863338076008441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8391367796070162559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0998e72669c38f044927b7d97b5af439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -25,7 +25,7 @@ public class TileGenerator : MonoBehaviour
         //    num = Random.Range(0, listNum.Length);
         //}
         //while (listNum[num] == 0);
-        startPos = new Vector2(listNum[num], 2);
+        startPos = new Vector2(listNum[num], -1);
         Instantiate(dirtPrefab, startPos, Quaternion.identity);
     }
 

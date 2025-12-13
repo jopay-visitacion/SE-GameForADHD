@@ -2,49 +2,104 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Camera cam;
+    [Header("Player Settings")]
+    [SerializeField] float playerSpeed = 10f;
+    [SerializeField] float jumpForce = 10f;
+    [SerializeField] float jumpTime;
+    [SerializeField] float fallMultiplier = 3f;
+    [SerializeField] float jumpMultiplier;
+    bool isJumping;
 
-    public float stepX = 4f;
-    public float stepY = 1.5f;
+    Vector2 vecGravity;
+    float jumpCounter;
 
+    private Rigidbody2D rb;
+    float horizontal;
+
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundCheckRadius = 2.4f;
+
+    private bool facingRight = true;
+
+    public Camera _camera;
     public float cameraSmoothSpeed = 5f;
     private float targetCamY;
 
-    private void Start()
+    void Start()
     {
+        vecGravity = new Vector2 (0, -Physics2D.gravity.y);
         rb = GetComponent<Rigidbody2D>();
-        cam = Camera.main;
-
-        targetCamY = cam.transform.position.y;  // Start at current position
+        Application.targetFrameRate = 300;
     }
 
-    private void Update()
+    void Update()
     {
-        Vector2 pos = rb.position;
+        horizontal = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        Move();
+        Jump();
+    }
+
+    void Move()
+    {
+        rb.linearVelocity = new Vector2(horizontal * playerSpeed, rb.linearVelocity.y);
+        if (horizontal > 0 && !facingRight) Flip();
+        else if (horizontal < 0 && facingRight) Flip();
+        targetCamY = transform.position.y;
+    }
+
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            Vector2 newPos = new Vector2(pos.x - stepX, pos.y + stepY);
-            rb.MovePosition(newPos);
-
-            targetCamY = newPos.y;
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
+            isJumping = true;
+            jumpCounter = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (rb.linearVelocity.y > 0 && isJumping)
         {
-            Vector2 newPos = new Vector2(pos.x + stepX, pos.y + stepY);
-            rb.MovePosition(newPos);
+            jumpCounter += Time.deltaTime;
+            if (jumpCounter > jumpTime) isJumping = false;
 
-            targetCamY = newPos.y;
+            rb.linearVelocity += vecGravity * jumpMultiplier * Time.deltaTime;
+        }
+
+        if (rb.linearVelocity.y < 0 && isJumping)
+        {
+            rb.linearVelocity -= vecGravity * fallMultiplier * Time.deltaTime;
+        }
+
+        if (Input.GetButtonUp("Jump"))
+        {
+            isJumping = false;
         }
     }
 
     private void LateUpdate()
     {
-        // Smooth the camera
-        Vector3 camPos = cam.transform.position;
+        Vector3 camPos = _camera.transform.position;
         camPos.y = Mathf.Lerp(camPos.y, targetCamY, cameraSmoothSpeed * Time.deltaTime);
-        cam.transform.position = camPos;
+        _camera.transform.position = camPos;
+    }
+
+    bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+    void OnDrawGizmos()
+    {
+        if (groundCheck == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }

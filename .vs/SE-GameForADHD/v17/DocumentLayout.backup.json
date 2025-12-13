@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|c:\\users\\apple\\documents\\1. usjr\\2025-2026 1st semester\\softeng\\se-gameforadhd\\assets\\scripts\\destroyobjectsoutsideofcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\destroyobjectsoutsideofcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|c:\\users\\apple\\documents\\1. usjr\\2025-2026 1st semester\\softeng\\se-gameforadhd\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|c:\\users\\apple\\documents\\1. usjr\\2025-2026 1st semester\\softeng\\se-gameforadhd\\assets\\scripts\\jumpmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\assets\\scripts\\jumpmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0305AEFB-BE03-2AE9-B037-6C6F5AB2189C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jumpmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DestroyObjectsOutsideofCamera.cs",
-              "DocumentMoniker": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\Assets\\Scripts\\DestroyObjectsOutsideofCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DestroyObjectsOutsideofCamera.cs",
-              "ToolTip": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\Assets\\Scripts\\DestroyObjectsOutsideofCamera.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DestroyObjectsOutsideofCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T19:49:56.996Z",
+              "WhenOpened": "2025-12-11T03:15:51.259Z",
               "EditorCaption": ""
             },
             {
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\JumpMove.cs",
               "ToolTip": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\Assets\\Scripts\\JumpMove.cs",
               "RelativeToolTip": "Assets\\Scripts\\JumpMove.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T19:47:34.102Z",
               "EditorCaption": ""
@@ -58,9 +58,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileGenerator.cs",
               "ToolTip": "C:\\Users\\Apple\\Documents\\1. USJR\\2025-2026 1st Semester\\SOFTENG\\SE-GameForADHD\\Assets\\Scripts\\TileGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\TileGenerator.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwBsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T18:40:13.574Z"
+              "WhenOpened": "2025-12-10T18:40:13.574Z",
+              "EditorCaption": ""
             }
           ]
         }

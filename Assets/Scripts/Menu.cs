@@ -5,6 +5,6 @@ public class Menu : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadSceneAsync("Game");
+        SceneManager.LoadScene("Game");
     }
 }

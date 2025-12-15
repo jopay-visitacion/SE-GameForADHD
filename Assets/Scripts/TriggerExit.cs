@@ -8,7 +8,7 @@ public class TriggerExit : MonoBehaviour
         if (collision.CompareTag("Tile"))
         {
             Destroy(collision.gameObject);
-            _tile.tileCount--;
+            //_tile.tileCount--;
         }
     }
 }

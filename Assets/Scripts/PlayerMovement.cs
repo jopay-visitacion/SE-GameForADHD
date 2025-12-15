@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] float playerSpeed = 10f;
+
+    [Header("Jump Settings")]
     [SerializeField] float jumpForce = 10f;
     [SerializeField] float jumpTime;
     [SerializeField] float fallMultiplier = 3f;
@@ -16,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     float horizontal;
 
+    [Header("Ground Check")]
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float groundCheckRadius = 2.4f;
 
     private bool facingRight = true;
 
+    [Header("Camera")]
     public Camera _camera;
     public float cameraSmoothSpeed = 5f;
     private float targetCamY;
@@ -78,6 +82,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void LateUpdate()
+    {
+        SmoothCamera();
+    }
+
+    void SmoothCamera()
     {
         Vector3 camPos = _camera.transform.position;
         camPos.y = Mathf.Lerp(camPos.y, targetCamY, cameraSmoothSpeed * Time.deltaTime);
